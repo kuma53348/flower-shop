@@ -1,0 +1,641 @@
+/* 定义一个全局CSS变量，以便在整个文档中使用一致的颜色。 */
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 80%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(red, green, blue, alpha);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 10%;
+    padding: 1rem 9%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    /* box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1); */
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+header .icons a {
+    color: #333;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #333;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.home .content p {
+    font-size: 1.2rem;
+    color: #999;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem o;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+    width: 120%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p {
+    font-size: 1.2rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 20rem;
+
+}
+
+.icons-container .icons img {
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+}
+
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem
+}
+
+.products .box-container .box {
+    flex: 1 1 3rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.products .box-container .box .discount {
+    z-index: 2;
+    /* 确保覆盖层在图片上层 */
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    background: rgba(255, 51, 153, .05);
+    color: var(--pink);
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+}
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -5rem;
+    /* 初始位置设置在视口下方 7rem，使其在默认情况下不可见 */
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .box-container .box .image .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--pink);
+    color: #fff;
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom: 0;
+    /* 当鼠标悬停在.box元素上时，将.icons容器移动到底部 */
+}
+
+.products .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover {
+    background: #f0cbcb;
+}
+
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2rem;
+}
+
+.products .box-container .box .content .price {
+    font-size: 1.5rem;
+    color: var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+
+}
+
+.products .box-container .box .content .price span {
+    font-size: 1rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+
+
+/* 单个评论盒子 */
+.review .box-container .box {
+    background: #fff;
+    /* 评论盒子的背景色 */
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    align-items: center;
+    /* 水平居中对齐子元素 */
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    /* 评论盒子的阴影 */
+    flex: 1 1 25rem;
+    /* Flex属性，实现响应式设计 */
+    border-radius: 1rem;
+    /* 评论盒子的圆角 */
+    padding: 3rem 2rem;
+    /* 评论盒子的内边距 */
+    border: .1rem solid rgba(0, 0, 0, .1);
+    /* 评论盒子的边框 */
+    position: relative;
+    /* 为定位引用图标提供参考 */
+    max-width: 400px;
+    /* 每个评论盒子的最大宽度 */
+}
+
+.review .box-container .box .stars i {
+    color: var(--pink);
+    font-size: 2rem;
+}
+
+.review .box-container .box p {
+    color: #999;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user {
+
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .fa-quote-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+.review .box-container .box .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.review .box-container .box .user span {
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    padding: 2rem 2.5rem;
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.contact .row .image {
+    flex: 1 1 40rem;
+}
+
+/* 重点！！！ */
+
+.contact .row .image img {
+    width: 100%;
+}
+
+.contact .row form .box {
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    color: #333;
+    text-decoration: none;
+    margin: .7rem 0;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.contact .row form .box:focus {
+    border-color: var(--pink);
+}
+
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img {
+    margin-top: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1.3rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    padding-bottom: 9rem;
+}
+
+.footer .credit span {
+    color: var(--pink);
+}
+
+
+
+/* 媒体查询部分 */
+
+/* 适用于平板设备 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 3%;
+        /* 将导航栏从水平布局改为垂直布局 */
+    }
+
+    header .navbar {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header .navbar a {
+        margin: 0.5rem 0;
+    }
+
+    .home {
+        padding: 2rem;
+    }
+
+    .home .content h3 {
+        font-size: 3rem;
+        /* 调整标题字体大小以适应较小屏幕 */
+    }
+
+    .home .content span {
+        font-size: 2rem;
+        /* 调整副标题字体大小 */
+    }
+
+    .home .content p {
+        font-size: 1rem;
+        /* 调整段落文本大小 */
+    }
+
+    .about .row {
+        flex-direction: column;
+        /* 将about部分的内容从水平布局改为垂直布局 */
+    }
+
+    .about .row .content {
+        text-align: center;
+        /* 使文本在较小屏幕上居中对齐 */
+    }
+}
+
+/* 适用于手机设备 */
+@media (max-width: 480px) {
+    html {
+        font-size: 60%;
+        /* 调整根字体大小，缩小整体页面 */
+    }
+
+    header {
+        padding: 1rem 2%;
+    }
+
+    header .logo {
+        font-size: 2rem;
+        /* 调整logo字体大小 */
+    }
+
+    header .navbar a {
+        font-size: .8rem;
+        /* 调整导航栏链接字体大小 */
+    }
+
+    header .icons a {
+        font-size: .9rem;
+        /* 调整图标字体大小 */
+    }
+
+    .home .content h3 {
+        font-size: 2.5rem;
+        /* 调整标题字体大小 */
+    }
+
+    .home .content span {
+        font-size: 1.5rem;
+        /* 调整副标题字体大小 */
+    }
+
+    .home .content p {
+        font-size: 0.9rem;
+        /* 调整段落文本大小 */
+    }
+
+    .about .row {
+        flex-direction: column;
+        /* 将about部分的内容从水平布局改为垂直布局 */
+    }
+
+    .about .row .video-container,
+    .about .row .content {
+        flex: 1 1 100%;
+        /* 将视频容器和内容部分设置为全宽 */
+    }
+
+    .about .row .content h3 {
+        font-size: 2rem;
+        /* 调整内容标题字体大小 */
+    }
+
+    .about .row .content p {
+        font-size: 1rem;
+        /* 调整内容段落字体大小 */
+    }
+
+    .icons-container {
+        flex-direction: column;
+        align-items: center;
+        /* 将图标容器从水平布局改为垂直布局，并居中对齐 */
+    }
+
+    .products .box-container .box {
+        flex: 1 1 100%;
+        /* 将产品盒子设置为全宽 */
+    }
+
+    .review .box-container .box {
+        flex: 1 1 100%;
+        /* 将评论盒子设置为全宽 */
+    }
+
+    .contact .row {
+        flex-direction: column-reverse;
+        /* 将联系部分的内容从水平布局改为垂直布局，并反转顺序 */
+    }
+
+    .contact .row form,
+    .contact .row .image {
+        flex: 1 1 100%;
+        /* 将表单和图像设置为全宽 */
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+        align-items: center;
+        /* 将页脚容器从水平布局改为垂直布局，并居中对齐 */
+    }
+
+    .footer .box-container .box {
+        flex: 1 1 100%;
+        /* 将页脚盒子设置为全宽 */
+    }
+}
